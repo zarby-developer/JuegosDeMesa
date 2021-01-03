@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    android:background="@color/common_google_signin_btn_text_dark_focused"
+
+    tools:context=".OtherProfileActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_person_black_24dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/otherFondo1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="vertical">
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+
+            android:scaleType="centerCrop"
+
+            android:id="@+id/otherbgg"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Sus juegos"
+            android:id="@+id/otherMyGames"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Lista de deseos"
+            android:id="@+id/otherWishes"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Favoritos"
+            android:id="@+id/otherFavourites"/>
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mainRecicler4"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    </LinearLayout>

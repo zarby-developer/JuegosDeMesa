@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_dark_focused"
+    android:orientation="vertical"
+
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fondo1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_person_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+            <ImageView
+
+                android:id="@+id/bgg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="20dp"
+
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/myGames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Misjuegos" />
+
+            <Button
+                android:id="@+id/myWishes"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:text="Lista de deseos" />
+
+            <Button
+                android:id="@+id/favourites"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:text="Favoritos" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mantener pulsado para eliminar"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="bold" />
+
+
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mainRecicler2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/close"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_marginTop="10dp"
+                        android:text="Cerrar sesion" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

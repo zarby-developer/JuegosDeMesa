@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorPrimary"
+            android:scaleType="fitXY"
+            android:id="@+id/fondo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/icono"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:src="@drawable/ic_super42"/>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:padding="20dp">
+
+
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/name"
+              android:hint="correo electrónico"
+              android:layout_marginTop="20dp"
+              android:padding="20dp"
+              android:textColor="@color/cardview_light_background"
+              />
+
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/pass"
+              android:hint="contraseña"
+              android:textColor="@color/cardview_light_background"
+              android:padding="20dp"
+              />
+          <Button
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="100dp"
+              android:layout_marginStart="100dp"
+              android:gravity="center"
+              android:id="@+id/enter"
+              android:backgroundTint="@color/colorPrimary"
+              android:text="Entrar"/>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="o"
+              android:textColor="@color/cardview_light_background"
+              android:gravity="center"/>
+
+
+              android:textColor="@color/cardview_light_background"
+              android:layout_marginLeft="10dp"
+              android:layout_marginEnd="10dp"
+              android:id="@+id/entertlf"/>
+          <Button
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              style="?attr/materialButtonOutlinedStyle"
+              android:gravity="center"
+              android:layout_marginTop="20dp"
+              android:text="Crear usuario"
+              android:textColor="@color/cardview_light_background"
+              android:textAllCaps="false"
+              android:layout_marginLeft="10dp"
+              android:layout_marginEnd="10dp"
+              android:id="@+id/register"/>
+
+
+      </LinearLayout>
+  </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

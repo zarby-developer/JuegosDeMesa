@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "881716818119",
+    "firebase_url": "https://juegos-de-mesa-ef593.firebaseio.com",
+    "project_id": "juegos-de-mesa-ef593",
+    "storage_bucket": "juegos-de-mesa-ef593.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881716818119:android:8dc345db9d3e545b808ee2",
+        "android_client_info": {
+          "package_name": "com.salva.juegosDeMesa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881716818119-saqf513b1t5b6cg5e79bnkq76ksffq1j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salva.juegosDeMesa",
+            "certificate_hash": "dc2addee7c86af2cfec70187fc8626236b8b6237"
+          }
+        },
+        {
+          "client_id": "881716818119-ji9d40klfl7tl7h5u5adr7ukvur9f3gr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhEFP-aLJtXi1C3uf5c-ReB-9u7_oJPtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881716818119-ji9d40klfl7tl7h5u5adr7ukvur9f3gr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,2 @@
+rootProject.name='JuegosDeMesa'
+include ':app'

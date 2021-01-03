@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@color/colorPrimary"
+            android:id="@+id/fondo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:id="@+id/icono"
+        android:src="@drawable/icono"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:hint="usuario"
+                android:textColor="@color/cardview_light_background"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:textColor="@color/cardview_light_background"
+                android:hint="correo electrónico"
+                
+                android:padding="20dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pass"
+                android:hint="contraseña"
+                android:textColor="@color/cardview_light_background"
+
+                android:padding="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_light_background"
+                android:id="@+id/pass2"
+                android:hint="repetir contraseña"
+
+                android:padding="20dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:gravity="center"
+                android:id="@+id/register2"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="registrar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_light_background"
+                android:id="@+id/errortxt"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

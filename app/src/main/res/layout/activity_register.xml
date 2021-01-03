@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_google_signin_btn_text_dark_focused"
+
+    tools:context=".RegisterActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@color/colorPrimary"
+            android:id="@+id/fondo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:id="@+id/icono"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textColorHint="@color/cardview_light_background"
+                android:hint="usuario"
+                android:textColor="@color/cardview_light_background"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:textColorHint="@color/cardview_light_background"
+                android:textColor="@color/cardview_light_background"
+                android:hint="correo electrónico"
+                
+                android:padding="20dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/cardview_light_background"
+                android:id="@+id/pass"
+                android:hint="contraseña"
+                android:textColor="@color/cardview_light_background"
+                android:inputType="textPassword"
+
+                android:padding="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/cardview_light_background"
+                android:textColor="@color/cardview_light_background"
+                android:id="@+id/pass2"
+                android:inputType="textPassword"
+                android:hint="repetir contraseña"
+
+                android:padding="20dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:id="@+id/register2"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="registrar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_light_background"
+                android:id="@+id/errortxt"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
