@@ -856,7 +856,38 @@ class SplashActivity : AppCompatActivity() {
                 20 ,
                 "NQcQDyoo_H0"
             )
-
+            val gloomhaven = JuegosDeMesa(
+                "Gloomhaven" ,
+                "https://www.goblintrader.es/107355-thickbox_default/gloomhaven-2-edicion-spanish.jpg" ,
+                "\"Gloomhaven\" es un juego de mesa de combate táctico, de inspiración euro, en un mundo de continuos motivos cambiantes. Los jugadores tomarán el papel de un aventurero errante con su propio conjunto especial de habilidades y sus propias razones para viajar a este oscuro rincón del mundo.\n" +
+                        "\n" +
+                        "Los jugadores deben trabajar juntos por pura necesidad para despejar amenazas y peligrosas ruinas olvidadas. En el proceso, mejorarán sus habilidades con la experiencia y el botín, descubrirán nuevos lugares para explorar y saquear, y expandirán una historia siempre ramificada alimentada por las decisiones que toman.\n" +
+                        "\n" +
+                        "Este es un juego de tipo \"legacy\" con un mundo persistente y cambiante que se juega idealmente durante varias sesiones de juego. Después de cada escenario, los jugadores tomarán decisiones sobre qué hacer, lo que determinará cómo continúa la historia, algo así como un libro de tipo \"elige tu propia aventura\".\n" +
+                        "\n" +
+                        "La partida a través de un escenario  se deberá realizar de forma cooperativa, donde los jugadores lucharán contra monstruos usando un innovador sistema de cartas para determinar el orden de juego y lo que un jugador puede llegar a hacer en su turno.\n" +
+                        "\n" +
+                        "Esencialmente, cada turno un jugador jugará dos cartas de su mano. Cada carta tiene un número en la parte superior, y el número en la primera carta jugada determinará su orden de iniciativa. Cada carta también tiene una potencia superior e inferior, y cuando es el turno de un jugador en el orden de iniciativa, habrá que determinar si usar la potencia superior de una tarjeta y la potencia inferior de la otra, o viceversa.\n" +
+                        "\n" +
+                        "Los jugadores deben tener cuidado, sin embargo, porque con el tiempo perderán de forma definitiva las cartas de sus manos. Si tardan demasiado en despejar una mazmorra, pueden acabar exhaustos y forzados a retirarse." ,
+                asmodee ,
+                1,
+                4,
+                estrategia,
+                120,
+                "lNOiByrpalQ"
+            )
+val villainous = JuegosDeMesa (
+    "Villainous",
+    "https://www.kissradio.ca/wp-content/uploads/sites/6/2018/07/qk0aypsewgpwa0ljix34.jpg",
+    "En esta épica lucha de poderes malignos asumirás el papel de un Villano Disney y tendrás que tratar de alcanzar tu propio objetivo maquiavélico. Descubre las habilidades únicas de tu personaje y su estrategia ganadora, aprovechando al mismo tiempo los giros del destino para frustrar los planes de tus oponentes. ¿Quién triunfará sobre las fuerzas del bien y se hará con la victoria?",
+    otros,
+    2,
+    6,
+    estrategia,
+50,
+    "vsit3udwaDw"
+)
 
 
 
