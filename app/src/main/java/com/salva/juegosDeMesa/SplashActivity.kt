@@ -172,7 +172,7 @@ class SplashActivity : AppCompatActivity() {
             )
             val orquesta = JuegosDeMesa(
                 "Orquesta negra : Hitler debe morir",
-                "https://tse2.mm.bing.net/th?id=OIP.nmDJ2GXGPa8MjRlLvczekgAAAA&pid=Api&P=0&w=172&h=169",
+                "https://www.unplugandplay.co/1608-medium_default/orquesta-negra-hitler-debe-morir.jpg",
                 "Orquesta Negra es un juego puramente cooperativo en el que cada jugador encarnará a uno de los conspiradores de ese grupo y entre todos intentarán acabar con la vida de Hitler para evitar el colapso de Alemania y salvar el mayor número de vidas posibles, pero la tarea no será fácil pues el tiempo apremia y la Gestapo estrecha su cerco sobre los conspiradores.",
                 ludonova,
                 1,
@@ -361,7 +361,7 @@ class SplashActivity : AppCompatActivity() {
             )
             val scythe = JuegosDeMesa(
                 "Scythe",
-                "https://www.generacionx.es/image/69544e98-ffe7-4db4-a28b-06620f20bdcb.jpg",
+                "https://th.bing.com/th/id/R24749145252e3b87d6e26866a9e07a73?rik=WDfQdjNCj6%2b5XA&riu=http%3a%2f%2flamparamagica-shop.com%2fwp-content%2fuploads%2f2017%2f04%2fcomprar-scythe-promos.jpeg&ehk=j5B2pw2AkmEaOGwcPeCDhYIl5d16oDPM33QGPYeuDuY%3d&risl=&pid=ImgRaw",
                 "Es una época de disturbios en la Europa de 1920. Las cenizas de la primera gran guerra todavía oscurecen la nieve. La ciudad-estado capitalista conocida simplemente como \"La Fábrica\", que alimentó la guerra con mechs fuertemente blindados, ha cerrado sus puertas, llamando la atención de varios países cercanos.\n" +
                         "\n" +
                         "Scythe es un juego de construcción de motores ambientado en un período de la década de 1920 de historia alternativa. Es una época de agricultura y guerra, corazones rotos y engranajes oxidados, innovación y valor. En Scythe , cada jugador representa un personaje de una de las cinco facciones de Europa del Este que intentan ganar su fortuna y reclamar la participación de su facción en la tierra alrededor de la misteriosa Fábrica. Los jugadores conquistan territorios, reclutan nuevos reclutas, cosechan recursos, ganan aldeanos, construyen estructuras y activan monstruosos mechs.",
@@ -479,7 +479,7 @@ class SplashActivity : AppCompatActivity() {
             )
             val agricola = JuegosDeMesa(
                 "Agricola",
-                "https://lh3.googleusercontent.com/proxy/dq7KABBaifDsPp1B1nbVCnYZrfcGAHSni_D22mwl0Qw-LhRHR6BU_XY5iEn_A51i88YMLbD8PuFvyukqg3n4EmzUZDjJ2F9ZMiTQ6b4rGpRVe0rERWkHDxSBFg11",
+                "https://estaticos1.kubekings.com/13599-medium_default/devir-agricola-juego-de-mesa.jpg",
                 "En Agricola , eres un granjero en una cabaña de madera con tu cónyuge y poco más. En un turno, puedes realizar solo dos acciones, una para ti y otra para el cónyuge, de todas las posibilidades que encontrarás en una granja: recolectar arcilla, madera o piedra; construcción de cercas; y así. Puede pensar en tener hijos para lograr más trabajo, pero primero necesita expandir su casa. ¿Y qué vas a alimentar a todos los pequeños rugrats?\n" +
                         "\n" +
                         "El juego admite muchos niveles de complejidad, principalmente a través del uso (o no uso) de dos de sus principales tipos de cartas, Mejoras menores y Ocupaciones. En la versión para principiantes (llamada Variante familiar en el lanzamiento de EE. UU.), Estas tarjetas no se utilizan en absoluto. Para el juego avanzado, el lanzamiento en los Estados Unidos incluye tres niveles de ambos tipos de cartas; Básico (E-deck), Interactivo (I-deck) y Complejo (K-deck), y el libro de reglas alienta a los jugadores a experimentar con los diferentes mazos y mezclas de los mismos. También existen mazos de posventa como el Z-Deck y el L-Deck.\n" +
@@ -508,7 +508,7 @@ class SplashActivity : AppCompatActivity() {
             )
             val nemesis = JuegosDeMesa(
                 "Nemesis",
-                "https://www.generacionx.es/image/8eefecb0-042c-4b23-9e9f-c0b9fc31bbbd.jpg",
+                "https://www.spelmagazijn.be/media/seo/2/product/600x600/n/e/nemesis_rebel_games.jpg",
                 "Jugar a Nemesis te llevará al corazón del horror de supervivencia de ciencia ficción en todo su terror. Un soldado dispara a ciegas por un pasillo, tratando de detener el avance alienígena. Un científico se apresura a encontrar una solución en su laboratorio improvisado. Un traidor roba la última cápsula de escape en el último momento. Los intrusos que conoces en el barco no solo reaccionan al ruido que haces, sino que también evolucionan a medida que pasa el tiempo. Cuanto más dura el juego, más fuertes se vuelven. Durante el juego, controlas a uno de los miembros de la tripulación con un conjunto único de habilidades, baraja de cartas personal y equipo de arranque individual. Estos héroes cubren todas tus necesidades básicas de horror de SF. Por ejemplo, el científico es excelente con las computadoras y la investigación, pero tendrá dificultades en el combate. El soldado, por otro lado ...\n" +
                         "\n" +
                         "Nemesis es un juego semi-cooperativo en el que tú y tus compañeros de tripulación deben sobrevivir en un barco infestado de organismos hostiles. Para ganar el juego, debes completar uno de los dos objetivos que se te asignaron al comienzo del juego y volver a la Tierra de una pieza. Encontrarás muchos obstáculos en tu camino: enjambres de intrusos (el nombre dado a los organismos extraterrestres por la IA de la nave), el mal estado físico de la nave, las agendas de tus compañeros jugadores y, a veces, solo un destino cruel.\n" +
@@ -711,7 +711,7 @@ class SplashActivity : AppCompatActivity() {
             )
             val caylus = JuegosDeMesa(
                 "Caylus",
-                "https://www.planetongames.com/6273-large_default/caylus.jpg" ,
+                "https://www.board-game.co.uk/wp-content/uploads/2017/10/Caylus-1.jpg" ,
                 "Érase una vez ...\n" +
                         "1289. Para fortalecer las fronteras del Reino de Francia, el rey Felipe el justo decidió construir un nuevo castillo. Por el momento, Caylus no es más que un pueblo humilde, pero pronto, los trabajadores y artesanos se congregarán en la carreta, atraídos por las grandes perspectivas. Alrededor del sitio de construcción, una ciudad se está levantando lentamente.\n" +
                         "\n" +
@@ -832,7 +832,7 @@ class SplashActivity : AppCompatActivity() {
             )
             val istambul = JuegosDeMesa(
                 "Istambul",
-                "https://lh3.googleusercontent.com/proxy/zDJFegjjN_9ChWMZLQh8hnCjexvgjrhqip72oOti_Co8AxYmNUY8G8NJdBgQQNnH7upx8vJMzUdtvd9gyf84tOcQZxMFi7oIi8MZGZNGPg7l1Xenwva929aJnQ" ,
+                "https://http2.mlstatic.com/D_NQ_NP_618325-MLM25425794544_032017-O.jpg" ,
                 "Mercaderes, ¡sed bienvenidos al bazar de Estambul!\n" +
                         "\n" +
                         "En este juego, ganador del Kennerspiel des Jahres en 2014, mercaderes y sirvientes se afanan por las estrechas callejuelas tratando de aventajar a la competencia. La clave es una buena organización… ¡hay tantas cosas por hacer! Comprar mercancías, venderlas, adular al sultán, pasar por la mezquita, recoger el correo… sin olvidar un buen juego de dados ante una relajante taza de té. ¡Ah! y ese sobrino siempre metido en problemas…",
@@ -877,17 +877,48 @@ class SplashActivity : AppCompatActivity() {
                 120,
                 "lNOiByrpalQ"
             )
-val villainous = JuegosDeMesa (
-    "Villainous",
-    "https://www.kissradio.ca/wp-content/uploads/sites/6/2018/07/qk0aypsewgpwa0ljix34.jpg",
-    "En esta épica lucha de poderes malignos asumirás el papel de un Villano Disney y tendrás que tratar de alcanzar tu propio objetivo maquiavélico. Descubre las habilidades únicas de tu personaje y su estrategia ganadora, aprovechando al mismo tiempo los giros del destino para frustrar los planes de tus oponentes. ¿Quién triunfará sobre las fuerzas del bien y se hará con la victoria?",
-    otros,
-    2,
-    6,
-    estrategia,
-50,
-    "vsit3udwaDw"
-)
+            val villainous = JuegosDeMesa(
+                "Villainous",
+                "https://www.kissradio.ca/wp-content/uploads/sites/6/2018/07/qk0aypsewgpwa0ljix34.jpg",
+                "En esta épica lucha de poderes malignos asumirás el papel de un Villano Disney y tendrás que tratar de alcanzar tu propio objetivo maquiavélico. Descubre las habilidades únicas de tu personaje y su estrategia ganadora, aprovechando al mismo tiempo los giros del destino para frustrar los planes de tus oponentes. ¿Quién triunfará sobre las fuerzas del bien y se hará con la victoria?",
+                otros,
+                2,
+                6,
+                estrategia,
+                50,
+                "vsit3udwaDw"
+            )
+            val golpeDeFe = JuegosDeMesa(
+                "Golpe de fe",
+                "https://juegosdelamesaredonda.com/10308-47294-thickbox_default/golpe-de-fe.jpg",
+                "Los dioses son todopoderosos... ¡pero también se aburren! Compite con el resto, usa tus habilidades únicas y reúne el mayor número de creyentes de todo el archipiélago en el centro del mundo.\n" +
+                        "\n" +
+                        "\"Golpe de Fe\" es un juego de mesa, de control de áreas y de habilidad, con unas reglas fáciles de aprender y unas mecánicas muy divertidas. Además de poder empezar a jugar a los pocos minutos de abrir la caja, \"Golpe de Fe\" tiene una gran rejugabilidad. Distintos dioses, muchísimas leyes emocionantes y tú: el divino golpeador.",
+                malditoGames,
+                2,
+                4,
+                estrategia,
+                40,
+                "gpEqVMAjwuY"
+            )
+            val spaceBase = JuegosDeMesa(
+                "Space Base",
+                "https://www.buroprocitation.ca/img/product/J29600_1-B.jpg?fv=49B27DF85F39DDD19FC04A4046B72D66-60715",
+                "Space Base un juego de cartas en donde los jugadores asumen el rol de un comandante de una pequeña flota de naves espaciales. El objetivo, será ir ganando la suficiente influencia que les permita promocionar en almirante al final de la partida.\n" +
+                        "\n" +
+                        "Para conseguir este objetivo, deberás de hacer tratados comerciales y mejorar los ingresos de tu base, establecer nuevas colonias y todo lo que esté en tu mano para mejorar la influencia.\n" +
+                        "\n" +
+                        "Space Base es un juego sencillo de aprender y rápido de jugar en donde cada jugador tendrá que ir gestionando su base espacial a la que irá añadiendo diferentes tipos de naves para aumentar sus posibilidades de victoria.\n" +
+                        "\n" +
+                        "\n",
+                malditoGames,
+                2,
+                5,
+                estrategia,
+                60,
+                "r9Q3etMHlKI"
+            )
+
 
 
 
