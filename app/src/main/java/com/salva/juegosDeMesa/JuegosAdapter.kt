@@ -28,6 +28,11 @@ class JuegosAdapter(private var mDataSet: ArrayList<JuegosDeMesa>?, private val 
         override fun getItemCount(): Int {
             return mDataSet?.size ?: 0
         }
+    public fun  filtrar (filtroJuegosDeMesa : ArrayList<JuegosDeMesa> ){
+        this.mDataSet = filtroJuegosDeMesa
+        notifyDataSetChanged()
+
+    }
 
 
         inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -49,8 +54,10 @@ class JuegosAdapter(private var mDataSet: ArrayList<JuegosDeMesa>?, private val 
 
 
         }
+
 }
 interface JuegosListener {
     fun onjuegoClick(position: Int)
+    abstract fun filtrar(toString: String)
 
 }

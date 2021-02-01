@@ -2,23 +2,19 @@ package com.salva.juegosDeMesa
 
 import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter
-import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import com.salva.juegosDeMesa.model.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_home.fondo
-import kotlinx.android.synthetic.main.activity_profile.*
-import kotlin.collections.ArrayList
 
 class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, EditorialListener {
     val db = FirebaseAuth.getInstance()
@@ -39,10 +35,20 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
 
         setContentView(R.layout.activity_home)
+
         title = "Inicio"
+        edtSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable) {
+                filtrar(s.toString())
+            }
+        })
+
+
         data.addAll(DataHolder.allGames.sortedWith(compareBy({ it.title })))
         var mAdapter = JuegosAdapter(
-            data , this
+            data, this
         )
         mainRecicler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         mainRecicler.adapter = mAdapter
@@ -76,10 +82,11 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
         startActivity(Intent(this, ProfileActivity::class.java))
 
     }
+
     private fun openChoices() {
         val builder = MaterialAlertDialogBuilder(this)
         builder.setTitle("filtrar por :")
-        val filtros = arrayOf("editoriales", "categorias", "juegos" , "usuarios")
+        val filtros = arrayOf("editoriales", "categorias", "juegos", "usuarios")
         var checkedItem = 0
         builder.setSingleChoiceItems(
             filtros,
@@ -92,33 +99,45 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
             })
 
         builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
-            if (checkedItem == 0){
+            if (checkedItem == 0) {
                 vehiculo.clear()
                 vehiculo.addAll(DataHolder.allEditorial.sortedWith(compareBy({ it.name })))
-              val  mAdapter2 = EditorialAdapter(
-                    vehiculo , this
+                val mAdapter2 = EditorialAdapter(
+                    vehiculo, this
                 )
-                mainRecicler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                mainRecicler.layoutManager = LinearLayoutManager(
+                    this,
+                    LinearLayoutManager.VERTICAL,
+                    false
+                )
                 mainRecicler.adapter = mAdapter2
 
-            }else if (checkedItem == 1){
+            } else if (checkedItem == 1) {
                 vehiculo1.clear()
                 vehiculo1.addAll(DataHolder.allCategories.sortedWith(compareBy({ it.name })))
-                val  mAdapter2 = CategoriesAdapter(
-                    vehiculo1  , this
+                val mAdapter2 = CategoriesAdapter(
+                    vehiculo1, this
                 )
-                mainRecicler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                mainRecicler.layoutManager = LinearLayoutManager(
+                    this,
+                    LinearLayoutManager.VERTICAL,
+                    false
+                )
                 mainRecicler.adapter = mAdapter2
-            }else if (checkedItem == 2){
+            } else if (checkedItem == 2) {
                 data.clear()
                 data.addAll(DataHolder.allGames.sortedWith(compareBy({ it.title })))
                 val mAdapter2 = JuegosAdapter(
 
-                    data , this
+                    data, this
                 )
-                mainRecicler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                mainRecicler.layoutManager = LinearLayoutManager(
+                    this,
+                    LinearLayoutManager.VERTICAL,
+                    false
+                )
                 mainRecicler.adapter = mAdapter2
-            }else{
+            } else {
                 startActivity(Intent(this, UsuariosActivity::class.java))
 
             }
@@ -141,11 +160,33 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
     }
 
+    override fun filtrar(toString: String) {
+        val filtrarLista = ArrayList<JuegosDeMesa>()
+
+        for (juego in DataHolder.allGames) {
+            if (juego.title.toLowerCase().contains(toString.toLowerCase())) {
+                filtrarLista.add(juego)
+                filtrarLista.sortedWith(compareBy({ it.title}))
+                val mAdapter2 = JuegosAdapter(
+                   filtrarLista, this
+                )
+                mainRecicler.layoutManager = LinearLayoutManager(
+                    this,
+                    LinearLayoutManager.VERTICAL,
+                    false
+                )
+                mainRecicler.adapter = mAdapter2
+            }
+        }
+
+
+    }
+
 
     override fun onCategoriesClick(position: Int) {
         currentCategorie = vehiculo1[position] as Categorias
         data.clear()
-        data.addAll( currentCategorie.boardGames.sortedWith(compareBy({ it.title })))
+        data.addAll(currentCategorie.boardGames.sortedWith(compareBy({ it.title })))
         val  mAdapter2 = JuegosAdapter(
             data, this
         )
@@ -156,9 +197,9 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
     override fun onEditorialClick(position: Int) {
         currentEditorial = vehiculo[position] as Editorial
         data.clear()
-        data.addAll( currentEditorial.boardGames.sortedWith(compareBy({ it.title })))
+        data.addAll(currentEditorial.boardGames.sortedWith(compareBy({ it.title })))
         val  mAdapter2 = JuegosAdapter(
-            data , this
+            data, this
         )
         mainRecicler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         mainRecicler.adapter = mAdapter2
@@ -169,7 +210,9 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
 
 
+
 }
+
 
 
 
