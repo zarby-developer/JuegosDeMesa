@@ -175,6 +175,8 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
                     LinearLayoutManager.VERTICAL,
                     false
                 )
+                data.clear()
+                data.addAll(filtrarLista)
                 mainRecicler.adapter = mAdapter2
             }
         }

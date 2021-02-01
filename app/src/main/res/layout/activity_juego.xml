@@ -76,15 +76,17 @@
                 android:id="@+id/favs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="añadir a favoritos" />
             <Button
             android:layout_width="match_parent"
-
+                android:backgroundTint="@color/colorPrimary"
             android:layout_height="wrap_content"
             android:text="añadir a lista de deseos"
             android:id="@+id/wishes"/>
             <Button
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/colorPrimary"
                 android:layout_height="wrap_content"
                 android:text="añadir a mis juegos"
                 android:id="@+id/myjuego"/>

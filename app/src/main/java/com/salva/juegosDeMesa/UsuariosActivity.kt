@@ -3,6 +3,8 @@ package com.salva.juegosDeMesa
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
@@ -17,6 +19,7 @@ import com.salva.juegosDeMesa.model.DataHolder
 import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.salva.juegosDeMesa.model.Usuario
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_usuarios.*
 
@@ -32,6 +35,7 @@ class UsuariosActivity : AppCompatActivity() , userListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_usuarios)
         title = "Usuarios"
+
         Picasso.get().load(DataHolder.icono).into(bgg1)
         Picasso.get().load(DataHolder.fondo).into(fondo2)
         val query = db.collection("users")
@@ -46,6 +50,8 @@ class UsuariosActivity : AppCompatActivity() , userListener {
         mainRecicler3.adapter = fireAdapterUser
         onStart()
     }
+
+
 
     override fun onUserClick(documentId: Usuario) {
       DataHolder.userId = documentId.id.toString()
@@ -64,3 +70,4 @@ class UsuariosActivity : AppCompatActivity() , userListener {
         fireAdapterUser.stopListening()
     }
 }
+
