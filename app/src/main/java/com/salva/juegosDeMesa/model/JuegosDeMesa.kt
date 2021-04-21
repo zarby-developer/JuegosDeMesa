@@ -27,7 +27,8 @@ class JuegosDeMesa {
         numMinPlayers: Int,
         numMaxPlayer: Int,
         categorias: Categorias?,
-        duration: Int, isYT : String
+        duration: Int,
+        isYT : String
     ) {
         this.title = title
         this.boardGameImage = image

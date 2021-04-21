@@ -12,9 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
+import com.salva.juegosDeMesa.adapters.*
 import com.salva.juegosDeMesa.model.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlin.collections.ArrayList
 
 class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, EditorialListener {
     val db = FirebaseAuth.getInstance()
@@ -24,8 +26,8 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
     lateinit var currentEditorial : Editorial
     lateinit var currentCategorie : Categorias
 
-    var vehiculo:ArrayList<Editorial> = arrayListOf()
-    var vehiculo1:ArrayList<Categorias> = arrayListOf()
+    var editoriales:ArrayList<Editorial> = arrayListOf()
+    var categorias:ArrayList<Categorias> = arrayListOf()
 
 
 
@@ -100,10 +102,10 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
         builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
             if (checkedItem == 0) {
-                vehiculo.clear()
-                vehiculo.addAll(DataHolder.allEditorial.sortedWith(compareBy({ it.name })))
+                editoriales.clear()
+               editoriales.addAll(DataHolder.allEditorial.sortedWith(compareBy({ it.name })))
                 val mAdapter2 = EditorialAdapter(
-                    vehiculo, this
+                    editoriales, this
                 )
                 mainRecicler.layoutManager = LinearLayoutManager(
                     this,
@@ -112,11 +114,12 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
                 )
                 mainRecicler.adapter = mAdapter2
 
-            } else if (checkedItem == 1) {
-                vehiculo1.clear()
-                vehiculo1.addAll(DataHolder.allCategories.sortedWith(compareBy({ it.name })))
+            }
+            if (checkedItem == 1) {
+                categorias.clear()
+                categorias.addAll(DataHolder.allCategories.sortedWith(compareBy({ it.name })))
                 val mAdapter2 = CategoriesAdapter(
-                    vehiculo1, this
+                    categorias, this
                 )
                 mainRecicler.layoutManager = LinearLayoutManager(
                     this,
@@ -124,7 +127,8 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
                     false
                 )
                 mainRecicler.adapter = mAdapter2
-            } else if (checkedItem == 2) {
+            }
+            if (checkedItem == 2) {
                 data.clear()
                 data.addAll(DataHolder.allGames.sortedWith(compareBy({ it.title })))
                 val mAdapter2 = JuegosAdapter(
@@ -137,7 +141,8 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
                     false
                 )
                 mainRecicler.adapter = mAdapter2
-            } else {
+            }
+            if(checkedItem== 3){
                 startActivity(Intent(this, UsuariosActivity::class.java))
 
             }
@@ -160,15 +165,15 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
     }
 
-    override fun filtrar(toString: String) {
-        val filtrarLista = ArrayList<JuegosDeMesa>()
+    private fun filtrar(toString: String) {
+        val listaFiltrada = ArrayList<JuegosDeMesa>()
 
         for (juego in DataHolder.allGames) {
             if (juego.title.toLowerCase().contains(toString.toLowerCase())) {
-                filtrarLista.add(juego)
-                filtrarLista.sortedWith(compareBy({ it.title}))
+                listaFiltrada.add(juego)
+                listaFiltrada.sortedWith(compareBy({ it.title}))
                 val mAdapter2 = JuegosAdapter(
-                   filtrarLista, this
+                    listaFiltrada, this
                 )
                 mainRecicler.layoutManager = LinearLayoutManager(
                     this,
@@ -176,7 +181,7 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
                     false
                 )
                 data.clear()
-                data.addAll(filtrarLista)
+                data.addAll(listaFiltrada)
                 mainRecicler.adapter = mAdapter2
             }
         }
@@ -186,7 +191,7 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
 
     override fun onCategoriesClick(position: Int) {
-        currentCategorie = vehiculo1[position] as Categorias
+        currentCategorie = categorias[position] as Categorias
         data.clear()
         data.addAll(currentCategorie.boardGames.sortedWith(compareBy({ it.title })))
         val  mAdapter2 = JuegosAdapter(
@@ -197,7 +202,7 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
     }
 
     override fun onEditorialClick(position: Int) {
-        currentEditorial = vehiculo[position] as Editorial
+        currentEditorial = editoriales[position] as Editorial
         data.clear()
         data.addAll(currentEditorial.boardGames.sortedWith(compareBy({ it.title })))
         val  mAdapter2 = JuegosAdapter(
@@ -208,6 +213,7 @@ class HomeActivity : AppCompatActivity(), JuegosListener, CategoriesListener, Ed
 
 
     }
+
 
 
 

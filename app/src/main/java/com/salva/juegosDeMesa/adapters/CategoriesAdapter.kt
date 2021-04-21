@@ -1,16 +1,14 @@
-package com.salva.juegosDeMesa.model
+package com.salva.juegosDeMesa.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.salva.juegosDeMesa.JuegosAdapter
 import com.salva.juegosDeMesa.R
-import com.squareup.picasso.Picasso
+import com.salva.juegosDeMesa.model.Categorias
 import kotlinx.android.synthetic.main.categorias.view.*
-import kotlinx.android.synthetic.main.juegos.view.*
 
-class CategoriesAdapter(private val mDataSet: ArrayList<Categorias>? , val categoriesListener : CategoriesListener) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
+class CategoriesAdapter(private val mDataSet: ArrayList<Categorias>?, val categoriesListener : CategoriesListener) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.categorias, parent, false)

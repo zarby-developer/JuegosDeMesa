@@ -1,4 +1,4 @@
-package com.salva.juegosDeMesa
+package com.salva.juegosDeMesa.adapters
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,18 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.salva.juegosDeMesa.R
 import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.juegos.view.*
-
-
-
-
-
-
-import kotlinx.android.synthetic.main.juegos.view.*
-import java.text.SimpleDateFormat
-import java.util.*
 
 class JuegosAdapterProfile (
     recyclerOptions: FirestoreRecyclerOptions<JuegosDeMesa>, var taskListener: taskListener

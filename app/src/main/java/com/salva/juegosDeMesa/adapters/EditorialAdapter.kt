@@ -1,16 +1,14 @@
-package com.salva.juegosDeMesa
+package com.salva.juegosDeMesa.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.salva.juegosDeMesa.R
 import com.salva.juegosDeMesa.model.Editorial
-import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.editoriales.view.*
-import kotlinx.android.synthetic.main.juegos.view.*
 import kotlinx.android.synthetic.main.juegos.view.image
-import kotlinx.android.synthetic.main.juegos.view.title
 
 class EditorialAdapter (private val mDataSet: ArrayList<Editorial> , val editorialListener: EditorialListener) : RecyclerView.Adapter<EditorialAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

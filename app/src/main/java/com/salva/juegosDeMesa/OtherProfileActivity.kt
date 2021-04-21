@@ -7,18 +7,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
+import com.salva.juegosDeMesa.adapters.JuegosAdapterProfile
+import com.salva.juegosDeMesa.adapters.taskListener
 import com.salva.juegosDeMesa.model.DataHolder
 import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_other_profile.*
-import kotlinx.android.synthetic.main.activity_profile.*
 
-class OtherProfileActivity : AppCompatActivity()  , taskListener{
+class OtherProfileActivity : AppCompatActivity()  , taskListener {
     val dc = FirebaseDatabase.getInstance().getReference()
     val db = FirebaseFirestore.getInstance()
     var TAG = "MiApp"

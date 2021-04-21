@@ -3,24 +3,18 @@ package com.salva.juegosDeMesa
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
+import com.salva.juegosDeMesa.adapters.UsuarioAdapter
+import com.salva.juegosDeMesa.adapters.userListener
 import com.salva.juegosDeMesa.model.DataHolder
-import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.salva.juegosDeMesa.model.Usuario
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_usuarios.*
 
 class UsuariosActivity : AppCompatActivity() , userListener {
@@ -29,7 +23,7 @@ class UsuariosActivity : AppCompatActivity() , userListener {
     val dc = FirebaseDatabase.getInstance().getReference()
     var data: ArrayList<Usuario> = arrayListOf()
     var auth = FirebaseAuth.getInstance()
-    lateinit var adapterR:UsuarioAdapter
+    lateinit var adapterR: UsuarioAdapter
     lateinit var fireAdapterUser: FirestoreRecyclerAdapter<Usuario, UsuarioAdapter.ViewHolder1>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

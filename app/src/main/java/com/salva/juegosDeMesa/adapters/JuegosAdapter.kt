@@ -1,9 +1,11 @@
-package com.salva.juegosDeMesa
+package com.salva.juegosDeMesa.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.salva.juegosDeMesa.HomeActivity
+import com.salva.juegosDeMesa.R
 import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.juegos.view.*
@@ -28,11 +30,7 @@ class JuegosAdapter(private var mDataSet: ArrayList<JuegosDeMesa>?, private val 
         override fun getItemCount(): Int {
             return mDataSet?.size ?: 0
         }
-    public fun  filtrar (filtroJuegosDeMesa : ArrayList<JuegosDeMesa> ){
-        this.mDataSet = filtroJuegosDeMesa
-        notifyDataSetChanged()
 
-    }
 
 
         inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -58,6 +56,6 @@ class JuegosAdapter(private var mDataSet: ArrayList<JuegosDeMesa>?, private val 
 }
 interface JuegosListener {
     fun onjuegoClick(position: Int)
-    abstract fun filtrar(toString: String)
+
 
 }

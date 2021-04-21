@@ -10,15 +10,16 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.salva.juegosDeMesa.adapters.JuegosAdapterProfile
+import com.salva.juegosDeMesa.adapters.taskListener
 import com.salva.juegosDeMesa.model.DataHolder
 import com.salva.juegosDeMesa.model.JuegosDeMesa
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_home.*
 
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_profile.bgg
 
-class ProfileActivity : AppCompatActivity()  , taskListener{
+class ProfileActivity : AppCompatActivity()  , taskListener {
     val db = FirebaseFirestore.getInstance()
     var TAG = "MiApp"
     var data: ArrayList<JuegosDeMesa> = arrayListOf()
